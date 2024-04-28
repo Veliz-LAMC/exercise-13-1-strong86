@@ -9,6 +9,66 @@
 </head>
 
 <body>
+   <h1>Order Form</h1>
+  <form id="order-form" action="register_account.html" method="post">
+    <fieldset id="member-information">
+      <legend>Member Information</legend>
+      <label for="name"> Name:</label>
+      <input type="text" id="name" name="name" >
+      <label for="email"> Email:</label>
+      <input type="email" id="email" name="email" >
+    </fieldset>
+    <fieldset id="ordering-information">
+      <legend>Ordering Information</legend>
+      <label for="order-type"> Order Type:</label>
+      <select id="order-type" name="order-type" >
+        <option value=""> Select an option</option>
+        <option value="general"> General Admission</option>
+        <option value="vip"> VIP</option>
+      </select>
+      <label for="num-tickets"> Number of Tickets:</label>
+      input type="number" id="num-tickets" name="num-tickets" placeholder="Enter number of tickets" >
+    </fieldset>
+    <fieldset id="payment-method">
+      <legend>Payment Method</legend>
+      <label for="credit-card">
+        <input type="radio" id="credit-card" name="payment-method" value="credit-card" required> Credit Card
+      </label>
+      <label for="paypal">
+        input type="radio" id="paypal" name="payment-method" value="paypal" required> PayPal
+      </label>
+    </fieldset>
+    <fieldset id="credit-card-information">
+      <legend>Credit Card Information</legend>
+      <label for="card-type"> Card Type:</label>
+      <select id="card-type" name="card-type" >
+        <option value=""> Select a card type</option>
+        <option value="visa"> Visa</option>
+        <option value="mastercard"> Mastercard</option>
+        <option value="amex"> American Express</option>
+      </select>
+      <label for="card-number"> Card Number:</label>
+      input type="text" id="card-number" name="card-number" placeholder="Enter card number" >
+      <label for="expiration-month"> Expiration Month:</label>
+      <select id="expiration-month" name="expiration-month" >
+        <option value=""> Month</option>
+        <option value="01">01</option>
+        <option value="02"> 02</option>
+        <option value="03"> 03</option>
+        <!-- Add remaining months here -->
+      </select>
+      <label for="expiration-year"> Expiration Year:</label>
+      <select id="expiration-year" name="expiration-year" >
+        <option value=""> Year</option>
+        <option value="2022"> 2022</option>
+        <option value="2023"> 2023</option>
+        <option value="2024"> 2024</option>
+        <!-- Add remaining years here -->
+      </select>
+    </fieldset>
+    <input type="submit" value="Submit">
+  </form>
+</body>
 	<header>
 		<img src="images/town_hall_logo.gif" alt="Town Hall logo" height="80">
 		<h2>San Joaquin Valley Town Hall</h2>
@@ -38,24 +98,24 @@
     			<fieldset>
 	        		<legend>Registration Information</legend>
 	        		<label for="email">E-Mail:</label>
-	        		<input type="email" name="email" id="email" autofocus required><br>
+	        		<input type="email" name="email" id="email" ><br>
 	        		<label for="password">Password:</label>
-	        		<input type="password" name="password" id="password" required
+	        		<input type="password" name="password" id="password" 
 	                   	   placeholder="At least 6 letters or numbers"
 	                   	   pattern="[a-zA-Z0-9]{6,}" title="Must be at least 6 alphanumeric characters"><br>
 	        		<label for="verify">Verify Password:</label>
-	        		<input type="password" name="verify" id="verify" required><br>
+	        		<input type="password" name="verify" id="verify" ><br>
     			</fieldset>
     			<fieldset>
         			<legend>Member Information</legend>
         			<label for="first_name">First Name:</label>
-					<input type="text" name="first_name" id="first_name" required><br>
+					<input type="text" name="first_name" id="first_name" ><br>
 					<label for="last_name">Last Name:</label>
-					<input type="text" name="last_name" id="last_name" required><br>
+					<input type="text" name="last_name" id="last_name" ><br>
 					<label for="address">Address:</label>
 					<input type="text" name="address" id="address"><br>
 					<label for="city">City:</label>
-					<input type="text" name="city" id="city" required><br>
+					<input type="text" name="city" id="city" ><br>
 					<label for="state">State:</label>
 					<input type="text" name="state" id="state" required maxlength="2" placeholder="2-character code"><br>
 					<label for="zip">ZIP Code:</label>
@@ -74,7 +134,7 @@
 				    	<option value="c">Charter</option>
 					</select><br>
 					<label for="starting_date">Starting Date:</label>
-					<input type="date" name="starting_date" id="starting_date" required><br>
+					<input type="date" name="starting_date" id="starting_date" ><br>
 					<label for="tickets">Tickets for Guests:</label>
 					<input type="number" name="tickets" id="tickets" value="2" min="1" max="4" placeholder="from 1 to 4"><br>
 				</fieldset>
